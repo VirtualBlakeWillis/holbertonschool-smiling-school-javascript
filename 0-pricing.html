@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/favicon" href="images/favicon.ico">
+	<title>Holberton - Smiling School</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+
+	<!-- JQuery and Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+
+	<!-- Bootstrap styling -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="text-white">
+	<!-- Header -->
+	<header class="container-fluid bg-dark d-inline-block m-0 p-0 h-auto" style="
+					background-image: url('images/pic_2.jpg');
+					background-position: center;
+					background-repeat: no-repeat;
+					background-position: top;">
+		<div class="container-lg">
+
+			<!-- Nav Bar -->
+			<nav class="d-flex flex-column flex-sm-row pt-4">
+				<!-- Logo -->
+				<a href="homepage.html" class="d-flex flex-column flex-sm-row col-sm-6 align-items-center">
+					<img class="m-2" src="images/smile_off.png" height="30px" width="40px">
+					<img class="m-2" src="images/logo.png" height="30px" width="111px">
+				</a>
+
+				<!-- Hamburger -->
+				<button class="navbar-toggler float-left position-absolute d-sm-none" type="button"
+					data-toggle="collapse" data-target="#navbarLinks">
+					<span class="holberton_school-icon-menu text-white"></span>
+				</button>
+				<!-- Nav links -->
+				<div class="collapse navbar-collapse d-sm-flex col-sm-6" id="navbarLinks">
+					<ul class="navbar-nav text-uppercase ml-auto flex-sm-row align-items-center font-weight-bold">
+						<li class="navbar-item">
+							<a class="nav-link text-white mx-5 mx-lg-4 mx-sm-4" href="courses.html">COURSES</a>
+						</li>
+						<li class="navbar-item">
+							<a class="nav-link text-white mx-5 mx-lg-4 mx-sm-4" href="pricing.html">PRICING</a>
+						</li>
+						<li class="navbar-item">
+							<a class="nav-link text-white mx-5 mx-lg-4 mx-sm-4" href="#">LOGIN</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Hero Section -->
+			<div class="container">
+				<div class="d-flex flex-row justify-content-center my-5">
+					<h4>What is
+						<img class="m-2" src="images/smile_off.png" height="30px" width="40px">
+						<img class="m-2" src="images/logo.png">
+						?
+					</h4>
+				</div>
+				<h2 class="d-flex flex-row justify-content-center align-items-center my-5">Go pro!</h2>
+			</div>
+			<div class="container">
+				<table class="table-active"></table>
+			</div>
+			<div class="position-relative pt-5 mt-5">
+				<!-- Pricing Grid -->
+				<div class="d-flex row text-center justify-content-end text-white py-5">
+					<div class="col-6 col-md-4">
+						<button
+							class="btn btn-secondary rounded-pill text-uppercase font-weight-bold btn-shadow m-2 p-3"
+							href="#">Buy 3 months</button>
+						<h1 class="font-weight-bold text-white mt-4 mb-0">$3.60</h1>
+						<p class="text-muted ">$1.20/month</p>
+					</div>
+					<div class="col-6 col-md-4">
+						<button
+							class="btn btn-secondary rounded-pill text-uppercase font-weight-bold btn-shadow m-2 p-3"
+							href="#">Buy 1 year</button>
+						<h1 class="font-weight-bold text-white mt-4 mb-0">$12.99</h1>
+						<p class="text-muted">$1.08/month</p>
+					</div>
+				</div>
+
+				<!-- Pricing Table -->
+				<div class="second-row row text-center d-sm-none mt-5 mb-4">
+					<div class="col-4"></div>
+					<p class="col-4">3 MONTHS</p>
+					<p class="col-4">1 YEAR</p>
+				</div>
+
+				<div class="third-row row border-bottom border-secondary ">
+					<p class="col-4 text-start text-white align-self-center mt-4 mb-4 bord">Unlimited access to all
+						tutorials</p>
+					<span class="holberton_school-icon-check col-4 text-success text-center"></span>
+					<span class="holberton_school-icon-check col-4 text-success text-center"></span>
+				</div>
+				<div class="third-row row border-bottom border-secondary ">
+					<p class="col-4 text-start text-white align-self-center mt-4 mb-4 bord">Access SmileSchool private
+						forum</p>
+					<span class="holberton_school-icon-check col-4 text-success text-center"></span>
+					<span class="holberton_school-icon-check col-4 text-success text-center"></span>
+				</div>
+				<div class="third-row row border-bottom border-secondary ">
+					<p class="col-4 text-start text-white align-self-center mt-4 mb-4 bord">Access Smiles contests &
+						Smiles Analysis</p>
+					<span class="holberton_school-icon-check col-4 text-success text-center"></span>
+					<span class="holberton_school-icon-check col-4 text-success text-center"></span>
+				</div>
+				<div class="third-row row border-bottom border-secondary ">
+					<p class="col-4 text-start text-white align-self-center mt-4 mb-4 bord">Get a free toothbrush</p>
+					<span class="col-4 text-success text-center"></span>
+					<span class="holberton_school-icon-check col-4 text-success text-center"></span>
+				</div>
+				<div class="third-row row border-bottom border-secondary ">
+					<div class="d-flex flex-column col-4">
+						<img class="signal mt-5" src="images/signal.png" alt="">
+						<p class="text-start text-white align-self-center mb-4 mt-3">Exclusive discount on all Signal
+							products</p>
+					</div>
+					<span class="col-4 text-success text-center"></span>
+					<span class="holberton_school-icon-check col-4 text-success text-center"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<!-- Carousel of Testimonials-->
+		<section class="container-fluid purple-bg py-5   text-dark">
+			<div class="container-lg quotes">
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active px-5">
+							<div class="d-flex flex-column align-items-center flex-sm-row col-sm-10 carousel-helper mx-5">
+								<img class="rounded-circle carousel-avatar" src="images/profile_5.jpg" width="210px" />
+								<div class="px-sm-5">
+									<p class="px-2 mt-4 mt-md-0">&#171; Those tutorials are concise and go straight to
+										the point. I can't think of a better place to learn something. And it's so fun!
+									</p>
+									<p class="font-weight-bold pl-2 pt-2 mb-1 align-self-start">Person Name</p>
+									<cite class="pl-2 align-self-start">weather presenter</cite>
+								</div>
+							</div>
+						</div>
+
+						<div class="carousel-item px-5">
+							<div class="d-flex flex-column align-items-center flex-sm-row col-sm-10 carousel-helper mx-5">
+								<img class="rounded-circle carousel-avatar" src="images/profile_5.jpg" width="210px" />
+								<div class="px-sm-5">
+									<p class="px-2 mt-4 mt-md-0">&#171; Those tutorials are concise and go straight to
+										the point. I can't think of a better place to learn something. And it's so fun!
+									</p>
+									<p class="font-weight-bold pl-2 pt-2 mb-1 align-self-start">Person Name</p>
+									<cite class="pl-2 align-self-start">weather presenter</cite>
+								</div>
+							</div>
+						</div>
+
+						<div class="carousel-item px-5">
+							<div class="d-flex flex-column align-items-center flex-sm-row col-sm-10 carousel-helper mx-5">
+								<img class="rounded-circle carousel-avatar" src="images/profile_5.jpg" width="210px" />
+								<div class="px-sm-5">
+									<p class="px-2 mt-4 mt-md-0">&#171; Those tutorials are concise and go straight to
+										the point. I can't think of a better place to learn something. And it's so fun!
+									</p>
+									<p class="font-weight-bold pl-2 pt-2 mb-1 align-self-start">Person Name</p>
+									<cite class="pl-2 align-self-start">weather presenter</cite>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<a class="carousel-control-prev mb-5 mb-sm-0" href="#carouselExampleIndicators" role="button"
+						data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next mb-5 mb-sm-0" href="#carouselExampleIndicators" role="button"
+						data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- FAQ Section -->
+		<div class="container-fluid text-dark text-center faq my-5 bg-white">
+			<h1 class="mb-5">F.A.Q.</h1>
+			<div class="row">
+				<div class="col-12 col-md-6 faq-question">
+					<p class="text-left p1 pb-3">How does this work?</p>
+					<p class="text-left text-muted p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Alias, voluptatibus. Eius eaque nemo, facere nesciunt unde optio magnam adipisci nihil
+						tempore doloremque, laborum, consectetur nisi ipsa illo. Aliquid facilis eius cumque
+						expedita tempora.</p>
+				</div>
+				<div class="col-12 col-md-6 faq-question">
+					<p class="text-left p1 pb-3">How does this work?</p>
+					<p class="text-left text-muted p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Quia provident debitis perspiciatis dolore adipisci labore. Natus animi officia culpa,
+						perspiciatis rem quidem reiciendis odio officiis vel voluptatem id suscipit totam error
+						eligendi ratione.</p>
+				</div>
+				<div class="col-12 col-md-6 faq-question">
+					<p class="text-left p1 pb-3">How does this work?</p>
+					<p class="text-left text-muted p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Sunt saepe minima hic illum rerum veniam sed, maiores quaerat excepturi possimus
+						incidunt quisquam. Sequi, aliquam excepturi! Repellat unde dolorem, magni sint doloribus
+						ex iste.</p>
+				</div>
+				<div class="col-12 col-md-6 faq-question mb-5">
+					<p class="text-left p1 pb-3">How does this work?</p>
+					<p class="text-left text-muted p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Fugiat beatae architecto praesentium omnis iusto reiciendis sint fugit eos, ex libero
+						voluptatibus autem quos est, laborum placeat impedit quam neque vel hic fuga quisquam.
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<!-- Footer -->
+	<footer class="container-fluid bg-dark m-0 py-5">
+		<div class="row align-items-center justify-content-center">
+			<div class="d-flex col-lg-6 justify-content-center">
+				<img class="m-2" src="images/smile_off.png" height="30px" width="40px">
+				<img class="m-2" src="images/logo.png" height="30px" width="111px">
+			</div>
+			<ul class="list-group list-group-horizontal list-unstyled">
+				<li class="ml-3">
+					<a class="text-decoration-none" href="https://www.facebook.com/HolbertonSchool/">
+						<span class="fb-icon display-4"></span>
+					</a>
+				</li>
+				<li class="ml-3">
+					<a class="text-decoration-none" href="https://www.twitter.com/HolbertonSchool/">
+						<span class="twitter-icon display-4"></span>
+					</a>
+				</li>
+				<li class="ml-3">
+					<a class="text-decoration-none" href="https://www.instagram.com/HolbertonSchool/">
+						<span class="insta-icon display-4"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="text-muted d-flex justify-content-center mt-5">©smileschool 2020</div>
+	</footer>
+
+</body>
+
+</html>
