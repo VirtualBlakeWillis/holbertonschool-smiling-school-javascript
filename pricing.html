@@ -142,49 +142,93 @@
 	</header>
 
 	<main>
+		<style>
+			.loader-item {
+				display: flex;
+			}
+			.loader {
+				width: 150px;
+				height: 150px;
+				position: relative;
+				margin: auto;
+				margin-top: 20px;
+				border: 1px solid rgba(255, 255, 255, 0.9);
+				border-radius: 50%;
+				animation: counterClockwise 4s linear infinite;
+			}
+			.loader::before, .loader::after {
+					content: '';
+					position: absolute;
+					border-radius: 50%;
+				}
+			.loader::before {
+					width: 24px;
+					height: 24px;
+					background: #343a40;
+					animation: clockwise 4s linear infinite;
+			}
+			.loader::after {
+					width: 12px;
+					height: 12px;
+					top: 24px;
+					left: 24px;
+					background: #343a40;
+					transform-origin: -12px -12px;
+					animation: counterClockwise 1s linear infinite;
+			}
+				
+			@keyframes clockwise {
+				to {
+					transform: rotate(1turn)
+				}
+			}
+				
+			@keyframes counterClockwise {
+				to {
+					transform: rotate(-1turn)
+				}
+			}
+			
+		</style>
 		<!-- Carousel of Testimonials-->
 		<section class="container-fluid purple-bg py-5   text-dark">
+			<div class="testimonial-loader loader-item">
+				<div class="loader"></div>
+			</div>
+			<script>
+				$(window).on('load', function () {
+					$.get({
+						url: "https://smileschool-api.hbtn.info/quotes",
+						success: function(data) {
+							$('.testimonial-loader').hide();
+							for (item of data) {
+								let card = buildTestimonialCard(item);
+								$('.testimonial-carousel').append(card);
+								if (item.id == 1) {
+									$('.testimonial-carousel div:first-child').addClass('active');
+								}
+								}
+							}
+					});
+				});
+				function buildTestimonialCard(testimonial) {
+					return `
+						<div class="carousel-item px-5">
+							<div class="d-flex flex-column align-items-center flex-sm-row col-sm-10 carousel-helper mx-5">
+								<img class="rounded-circle carousel-avatar" src="${testimonial.pic_url}" width="210px" />
+								<div class="px-sm-5">
+									<p class="px-2 mt-4 mt-md-0">&#171; ${testimonial.text} &#187;</p>
+									<p class="font-weight-bold pl-2 pt-2 mb-1 align-self-start">${testimonial.name}</p>
+									<p class="font-italic pl-2 align-self-start">${testimonial.title}</p>
+								</div>
+							</div>
+						</div>
+					`;
+				}
+			</script>
 			<div class="container-lg quotes">
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner">
-						<div class="carousel-item active px-5">
-							<div class="d-flex flex-column align-items-center flex-sm-row col-sm-10 carousel-helper mx-5">
-								<img class="rounded-circle carousel-avatar" src="images/profile_5.jpg" width="210px" />
-								<div class="px-sm-5">
-									<p class="px-2 mt-4 mt-md-0">&#171; Those tutorials are concise and go straight to
-										the point. I can't think of a better place to learn something. And it's so fun!
-									</p>
-									<p class="font-weight-bold pl-2 pt-2 mb-1 align-self-start">Person Name</p>
-									<cite class="pl-2 align-self-start">weather presenter</cite>
-								</div>
-							</div>
-						</div>
-
-						<div class="carousel-item px-5">
-							<div class="d-flex flex-column align-items-center flex-sm-row col-sm-10 carousel-helper mx-5">
-								<img class="rounded-circle carousel-avatar" src="images/profile_5.jpg" width="210px" />
-								<div class="px-sm-5">
-									<p class="px-2 mt-4 mt-md-0">&#171; Those tutorials are concise and go straight to
-										the point. I can't think of a better place to learn something. And it's so fun!
-									</p>
-									<p class="font-weight-bold pl-2 pt-2 mb-1 align-self-start">Person Name</p>
-									<cite class="pl-2 align-self-start">weather presenter</cite>
-								</div>
-							</div>
-						</div>
-
-						<div class="carousel-item px-5">
-							<div class="d-flex flex-column align-items-center flex-sm-row col-sm-10 carousel-helper mx-5">
-								<img class="rounded-circle carousel-avatar" src="images/profile_5.jpg" width="210px" />
-								<div class="px-sm-5">
-									<p class="px-2 mt-4 mt-md-0">&#171; Those tutorials are concise and go straight to
-										the point. I can't think of a better place to learn something. And it's so fun!
-									</p>
-									<p class="font-weight-bold pl-2 pt-2 mb-1 align-self-start">Person Name</p>
-									<cite class="pl-2 align-self-start">weather presenter</cite>
-								</div>
-							</div>
-						</div>
+					<div class="carousel-inner testimonial-carousel">
 					</div>
 
 					<a class="carousel-control-prev mb-5 mb-sm-0" href="#carouselExampleIndicators" role="button"
